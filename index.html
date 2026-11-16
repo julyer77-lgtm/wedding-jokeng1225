@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>아사쿠라 죠 & 코가 유다이 결혼식에 초대합니다</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Noto Serif KR & Cormorant Garamond -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Noto+Serif+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Noto Serif KR', serif;
+            background-color: #FAF8F5;
+            color: #4a4238;
+            overflow-x: hidden;
+        }
+
+        .font-serif-en {
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        /* Gold gradient borders & elements */
+        .gold-border-box {
+            border: 1px solid #d4af37;
+            outline: 1px solid #ebd99f;
+            outline-offset: -4px;
+        }
+
+        .gold-text {
+            background: linear-gradient(135deg, #b8860b 0%, #d4af37 50%, #aa7c11 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Luxurious Groom Name Styling */
+        .groom-name-luxury {
+            background: linear-gradient(135deg, #2b231b 0%, #5c4934 45%, #2b231b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 0.22em;
+            text-shadow: 0 2px 12px rgba(212, 175, 55, 0.14);
+        }
+
+        .groom-badge {
+            font-size: 0.7rem;
+            letter-spacing: 0.2em;
+            color: #9e7e38;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.45);
+            padding-bottom: 2px;
+        }
+
+        .gold-gradient-bg {
+            background: linear-gradient(135deg, #d4af37 0%, #edd892 50%, #b8860b 100%);
+        }
+
+        .gold-button {
+            background: linear-gradient(135deg, #c5a059 0%, #d4af37 50%, #b8860b 100%);
+            color: #ffffff;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.25);
+        }
+
+        .gold-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+        }
+
+        /* Sparkle & Light Animation */
+        @keyframes glowingLight {
+            0% { opacity: 0.3; transform: scale(0.98); }
+            50% { opacity: 0.8; transform: scale(1.02); }
+            100% { opacity: 0.3; transform: scale(0.98); }
+        }
+
+        .illumination-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 0;
+            background: 
+                radial-gradient(circle at 20% 20%, rgba(255, 223, 138, 0.18) 0%, transparent 40%),
+                radial-gradient(circle at 80% 60%, rgba(240, 204, 107, 0.15) 0%, transparent 45%),
+                radial-gradient(circle at 50% 85%, rgba(255, 239, 191, 0.2) 0%, transparent 50%);
+            animation: glowingLight 8s infinite ease-in-out;
+        }
+
+        /* Twinkling dots */
+        .sparkle {
+            position: absolute;
+            background: radial-gradient(circle, #fff7d6 0%, rgba(212,175,55,0.8) 70%, transparent 100%);
+            border-radius: 50%;
+            pointer-events: none;
+            animation: twinkle var(--duration) infinite ease-in-out var(--delay);
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0; transform: scale(0.3); }
+            50% { opacity: 0.9; transform: scale(1.2); }
+        }
+
+        /* Smooth scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="relative min-h-screen flex justify-center items-center py-0 sm:py-8">
+
+    <!-- Soft Illumination Overlay Background -->
+    <div class="illumination-bg"></div>
+
+    <!-- Floating Sparkles Container -->
+    <div id="sparkle-container" class="fixed inset-0 pointer-events-none z-0 overflow-hidden"></div>
+
+    <!-- Main Container (Mobile Frame width limit) -->
+    <main class="relative z-10 w-full max-w-md bg-[#faf7f2]/95 min-h-screen sm:min-h-0 sm:rounded-2xl shadow-2xl overflow-hidden border border-[#e8dfd1] flex flex-col">
+        
+        <!-- TOP COVER / HEADER -->
+        <header class="relative px-6 pt-16 pb-14 text-center">
+            <!-- Decorative Gold Corner Border Container -->
+            <div class="gold-border-box mx-auto p-8 rounded-t-full relative bg-[#fcfaf7]/70 backdrop-blur-sm">
+                
+                <p class="font-serif-en text-sm tracking-[0.3em] uppercase gold-text font-semibold mb-2">Wedding Invitation</p>
+                <div class="w-8 h-[1px] bg-[#d4af37] mx-auto mb-6"></div>
+
+                <div class="text-xs tracking-widest text-[#8c7b6c] mb-1">성탄절 예식</div>
+                <h1 class="text-2xl font-bold tracking-wide text-[#383028] mb-6">
+                    2026년 12월 25일
+                </h1>
+
+                <!-- Couple Names (Elevated Luxury Typography) -->
+                <div class="my-7 py-4 px-3 rounded-2xl bg-gradient-to-b from-transparent via-[#f6efe3]/60 to-transparent border-y border-[#e6d5b8]/60 space-y-3.5">
+                    <div class="flex flex-col items-center">
+                        <span class="groom-badge font-medium mb-1.5">신랑 · GROOM</span>
+                        <span class="groom-name-luxury text-[1.45rem] font-semibold pl-[0.22em]">
+                            아사쿠라 죠
+                        </span>
+                    </div>
+
+                    <div class="flex items-center justify-center space-x-3 py-0.5">
+                        <span class="w-8 h-[1px] bg-gradient-to-r from-transparent to-[#d4af37]/70"></span>
+                        <span class="text-sm gold-text font-serif-en italic tracking-widest">✦ &amp; ✦</span>
+                        <span class="w-8 h-[1px] bg-gradient-to-l from-transparent to-[#d4af37]/70"></span>
+                    </div>
+
+                    <div class="flex flex-col items-center">
+                        <span class="groom-badge font-medium mb-1.5">신랑 · GROOM</span>
+                        <span class="groom-name-luxury text-[1.45rem] font-semibold pl-[0.22em]">
+                            코가 유다이
+                        </span>
+                    </div>
+                </div>
+
+                <div class="w-12 h-[1px] bg-[#e2d5c3] mx-auto my-6"></div>
+
+                <!-- Venue Info Preview -->
+                <p class="text-sm tracking-wide text-[#6b5c4d]">
+                    <i class="fa-solid fa-location-dot text-[#c5a059] mr-1"></i>
+                    도쿄 아오야마 그랑시엘
+                </p>
+            </div>
+        </header>
+
+        <!-- DECORATIVE DIVIDER -->
+        <div class="flex items-center justify-center space-x-2 my-2 opacity-70">
+            <div class="w-12 h-[1px] bg-[#d4af37]"></div>
+            <div class="text-[#d4af37] text-xs">✤</div>
+            <div class="w-12 h-[1px] bg-[#d4af37]"></div>
+        </div>
+
+        <!-- GREETING SECTION (Bilingual) -->
+        <section class="px-8 py-10 text-center space-y-8">
+            <h2 class="font-serif-en text-xl tracking-widest gold-text uppercase">Greeting</h2>
+            
+            <!-- Korean Version -->
+            <div class="space-y-3 text-sm leading-relaxed text-[#4a4035] font-light">
+                <p>서로 다른 계절을 지나<br>마침내 하나의 계절에 닿았습니다.</p>
+                <p>오랜 시간 서로의 곁을 지켜온 두 사람이<br>이제 부부라는 이름으로 새로운 시작을 맞이합니다.</p>
+                <p>두 사람의 앞날에 소중한 축복을<br>더해 주시면 감사하겠습니다.</p>
+            </div>
+
+            <!-- Divider Line -->
+            <div class="w-16 h-[1px] bg-[#ebd99f] mx-auto opacity-60"></div>
+
+            <!-- Japanese Version -->
+            <div class="space-y-3 text-xs leading-relaxed text-[#736454] font-light tracking-tight">
+                <p>異なる季節を越え、<br>ようやくひとつの季節にたどり着きました。</p>
+                <p>長い時間をかけてお互いの隣を歩んできた二人が、<br>このたび夫婦として新たな一歩を踏み出します。</p>
+                <p>二人のこれからの人生に、<br>温かな祝福を添えていただけましたら幸いです。</p>
+            </div>
+        </section>
+
+        <!-- WEDDING INFO SECTION -->
+        <section class="px-6 py-10 bg-[#f7f2ea] border-y border-[#ede4d5] text-center">
+            <div class="inline-block px-4 py-1 rounded-full border border-[#c5a059]/40 bg-[#faf7f2] mb-3">
+                <span class="font-serif-en text-xs tracking-widest gold-text uppercase font-semibold">Wedding Information</span>
+            </div>
+            <h3 class="text-xl font-semibold text-[#383028] mb-6">예식 안내</h3>
+
+            <div class="bg-[#faf7f2] p-6 rounded-xl border border-[#e5dac9] space-y-4 text-sm text-[#4a4035]">
+                <div class="flex flex-col sm:flex-row justify-between items-center py-2 border-b border-[#f0e6d8]">
+                    <span class="text-xs text-[#8c7b6c] uppercase tracking-wider font-semibold mb-1 sm:mb-0">일시 Date & Time</span>
+                    <span class="font-medium text-[#2c251e]">2026년 12월 25일 금요일 오후 3시</span>
+                </div>
+                <div class="flex flex-col sm:flex-row justify-between items-center py-2 border-b border-[#f0e6d8]">
+                    <span class="text-xs text-[#8c7b6c] uppercase tracking-wider font-semibold mb-1 sm:mb-0">장소 Venue</span>
+                    <span class="font-medium text-[#2c251e]">도쿄 아오야마 그랑시엘</span>
+                </div>
+                <div class="flex flex-col sm:flex-row justify-between items-center py-2 border-b border-[#f0e6d8]">
+                    <span class="text-xs text-[#8c7b6c] uppercase tracking-wider font-semibold mb-1 sm:mb-0">예식 Ceremony</span>
+                    <span class="font-medium text-[#2c251e]">오후 3시</span>
+                </div>
+                <div class="flex flex-col sm:flex-row justify-between items-center py-2">
+                    <span class="text-xs text-[#8c7b6c] uppercase tracking-wider font-semibold mb-1 sm:mb-0">피로연 Reception</span>
+                    <span class="font-medium text-[#2c251e]">오후 4시</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- LOCATION SECTION -->
+        <section class="px-6 py-10 text-center">
+            <div class="inline-block px-4 py-1 rounded-full border border-[#c5a059]/40 bg-[#fcfaf7] mb-3">
+                <span class="font-serif-en text-xs tracking-widest gold-text uppercase font-semibold">Location</span>
+            </div>
+            <h3 class="text-xl font-semibold text-[#383028] mb-6">찾아오시는 길</h3>
+
+            <div class="text-sm space-y-4 text-[#4a4035]">
+                <div>
+                    <h4 class="font-semibold text-base text-[#2c251e]">도쿄 아오야마 그랑시엘</h4>
+                    <p class="text-xs text-[#7a6b5d] mt-1">도쿄도 미나토구 시로카네 ○丁目 ○番地</p>
+                </div>
+
+                <div class="bg-[#f7f2ea] p-5 rounded-xl border border-[#e8dfd1] text-left space-y-3 text-xs leading-relaxed">
+                    <div class="flex items-start space-x-2">
+                        <i class="fa-solid fa-subway text-[#c5a059] mt-0.5"></i>
+                        <span><strong>도쿄 메트로 난보쿠선</strong> 시로카네다이역 도보 5분</span>
+                    </div>
+                    <div class="flex items-start space-x-2">
+                        <i class="fa-solid fa-train text-[#c5a059] mt-0.5"></i>
+                        <span><strong>도영 미타선</strong> 시로카네타카나와역 도보 8분</span>
+                    </div>
+                </div>
+
+                <p class="text-xs text-[#a08d7c] italic">
+                    ※ 본식 시작 30분 전까지 도착해 주시기 바랍니다.
+                </p>
+            </div>
+        </section>
+
+        <!-- RSVP BANNER & QUICK LINK BUTTON -->
+        <section class="px-6 py-8 bg-[#f5ede0] border-y border-[#e2d5c3] text-center">
+            <h3 class="font-serif-en text-lg tracking-widest gold-text font-semibold uppercase mb-1">RSVP & Guestbook</h3>
+            <h4 class="text-base font-semibold text-[#383028] mb-2">참석 여부 및 축하 메시지</h4>
+            <p class="text-xs text-[#6b5c4d] leading-relaxed mb-6">
+                원활한 예식 준비를 위해 참석 여부를 미리 알려주시면 감사하겠습니다.<br>
+                <span class="font-semibold text-[#b8860b]">12월 10일까지</span> 회신 및 방명록을 작성해주실 수 있습니다.
+            </p>
+
+            <a href="#guestbook" class="gold-button inline-flex items-center justify-center space-x-2 px-6 py-3.5 rounded-full text-sm font-medium w-full max-w-xs cursor-pointer">
+                <i class="fa-solid fa-pen-to-square"></i>
+                <span>참석 여부 전달 & 방명록 남기기</span>
+            </a>
+        </section>
+
+        <!-- RECEPTION SECTION -->
+        <section class="px-6 py-10 text-center">
+            <div class="inline-block px-4 py-1 rounded-full border border-[#c5a059]/40 bg-[#fcfaf7] mb-3">
+                <span class="font-serif-en text-xs tracking-widest gold-text uppercase font-semibold">Reception</span>
+            </div>
+            <h3 class="text-xl font-semibold text-[#383028] mb-4">식사 안내</h3>
+            
+            <p class="text-sm leading-relaxed text-[#5c5043] font-light max-w-xs mx-auto">
+                예식 후 준비된 식사와 함께 작은 피로연이 진행될 예정입니다.<br>
+                소중한 분들과 함께하는 자리인 만큼 편안한 마음으로 참석해 주시기 바랍니다.
+            </p>
+        </section>
+
+        <!-- GUESTBOOK & COMMENTS SECTION -->
+        <section id="guestbook" class="px-6 py-10 bg-[#fcfaf7] border-t border-[#e8dfd1] text-center">
+            <div class="inline-block px-4 py-1 rounded-full border border-[#c5a059]/40 bg-[#faf7f2] mb-3">
+                <span class="font-serif-en text-xs tracking-widest gold-text uppercase font-semibold">Guestbook</span>
+            </div>
+            <h3 class="text-xl font-semibold text-[#383028] mb-2">축하 마음 전달하기</h3>
+            <p class="text-xs text-[#7a6b5d] mb-6">참석 여부와 축하의 메시지를 남겨주세요.</p>
+
+            <!-- Form Box -->
+            <form id="comment-form" class="bg-[#faf7f2] p-5 rounded-xl border border-[#e5dac9] shadow-sm text-left space-y-4 mb-8">
+                <div>
+                    <label class="block text-xs font-semibold text-[#5c5043] mb-1">성함 / 아이디 (Name/ID)</label>
+                    <input type="text" id="guest-name" required placeholder="예: 홍길동 / 하객" 
+                        class="w-full px-3 py-2 text-sm bg-white border border-[#dcd3c4] rounded-lg focus:outline-none focus:border-[#c5a059] transition-colors">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold text-[#5c5043] mb-1">참석 여부 (RSVP)</label>
+                    <div class="grid grid-cols-2 gap-2">
+                        <label class="flex items-center justify-center p-2 text-xs border border-[#dcd3c4] rounded-lg cursor-pointer hover:bg-[#f5ede0] has-[:checked]:bg-[#f0e4cf] has-[:checked]:border-[#c5a059] has-[:checked]:font-semibold">
+                            <input type="radio" name="rsvp-status" value="참석" checked class="hidden">
+                            <span>🎉 참석합니다</span>
+                        </label>
+                        <label class="flex items-center justify-center p-2 text-xs border border-[#dcd3c4] rounded-lg cursor-pointer hover:bg-[#f5ede0] has-[:checked]:bg-[#f0e4cf] has-[:checked]:border-[#c5a059] has-[:checked]:font-semibold">
+                            <input type="radio" name="rsvp-status" value="불참" class="hidden">
+                            <span>💌 마음으로 함께합니다</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold text-[#5c5043] mb-1">축하 메시지 (Message)</label>
+                    <textarea id="guest-message" rows="3" required placeholder="축하 메시지나 전달하고 싶은 글을 남겨주세요." 
+                        class="w-full px-3 py-2 text-sm bg-white border border-[#dcd3c4] rounded-lg focus:outline-none focus:border-[#c5a059] transition-colors resize-none"></textarea>
+                </div>
+
+                <button type="submit" class="gold-button w-full py-2.5 rounded-lg text-sm font-semibold flex items-center justify-center space-x-1">
+                    <span>메시지 등록하기</span>
+                    <i class="fa-solid fa-paper-plane text-xs"></i>
+                </button>
+            </form>
+
+            <!-- Comments List Feed -->
+            <div class="text-left space-y-3">
+                <h4 class="text-xs font-semibold text-[#7a6b5d] uppercase tracking-wider mb-2 flex items-center justify-between">
+                    <span>축하 메시지 목록</span>
+                    <span id="comment-count" class="gold-text font-bold text-sm">0개</span>
+                </h4>
+                
+                <div id="comments-container" class="space-y-3 max-h-80 overflow-y-auto pr-1">
+                    <!-- Dynamic Comments will appear here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- THANK YOU / FOOTER SECTION -->
+        <footer class="px-8 py-12 text-center bg-[#f7f2ea] border-t border-[#e2d5c3]">
+            <p class="font-serif-en text-xs tracking-widest gold-text uppercase mb-2">Thank You</p>
+            <h3 class="text-lg font-semibold text-[#383028] mb-4">마지막 인사</h3>
+            
+            <p class="text-xs leading-relaxed text-[#6b5c4d] font-light mb-8">
+                바쁜 걸음 해주시는 모든 분께 감사드립니다.<br>
+                두 사람의 새로운 출발을 함께 축복해 주시는<br>
+                그 마음을 오래도록 간직하겠습니다.
+            </p>
+
+            <div class="text-[10px] text-[#a09080] font-serif-en tracking-wider border-t border-[#e5dac9] pt-6">
+                2026.12.25 ASAKURA JO &amp; KOGA YUDAI
+            </div>
+        </footer>
+
+    </main>
+
+    <!-- JavaScript Logic for Comments & Sparkle Animation -->
+    <script>
+        // Sparkle generator for light illumination effect
+        function createSparkles() {
+            const container = document.getElementById('sparkle-container');
+            const sparkleCount = 20;
+
+            for (let i = 0; i < sparkleCount; i++) {
+                const sparkle = document.createElement('div');
+                sparkle.className = 'sparkle';
+                const size = Math.random() * 4 + 2;
+                sparkle.style.width = `${size}px`;
+                sparkle.style.height = `${size}px`;
+                sparkle.style.left = `${Math.random() * 100}%`;
+                sparkle.style.top = `${Math.random() * 100}%`;
+                sparkle.style.setProperty('--duration', `${Math.random() * 4 + 3}s`);
+                sparkle.style.setProperty('--delay', `${Math.random() * 3}s`);
+                container.appendChild(sparkle);
+            }
+        }
+
+        // Guestbook / Comments Management (Local storage backup)
+        const initialComments = [
+            {
+                id: 1,
+                name: "지인 김민준",
+                rsvp: "참석",
+                message: "두 분의 소중한 날을 진심으로 축하드립니다! 도쿄에서 만나요!",
+                date: "2026-11-20"
+            },
+            {
+                id: 2,
+                name: "다나카 사토시",
+                rsvp: "참석",
+                message: "ご結婚おめでとうございます！当日楽しみにしています。",
+                date: "2026-11-21"
+            }
+        ];
+
+        function getComments() {
+            const stored = localStorage.getItem('wedding_guestbook_comments');
+            if (stored) {
+                try {
+                    return JSON.parse(stored);
+                } catch (e) {
+                    return initialComments;
+                }
+            }
+            return initialComments;
+        }
+
+        function saveComments(comments) {
+            localStorage.setItem('wedding_guestbook_comments', JSON.stringify(comments));
+        }
+
+        function renderComments() {
+            const comments = getComments();
+            const container = document.getElementById('comments-container');
+            const countEl = document.getElementById('comment-count');
+            
+            countEl.textContent = `${comments.length}개`;
+            container.innerHTML = '';
+
+            if (comments.length === 0) {
+                container.innerHTML = `<p class="text-xs text-center py-6 text-[#9a8a7a]">첫 번째 축하 메시지를 남겨보세요!</p>`;
+                return;
+            }
+
+            comments.forEach(c => {
+                const isRsvpYes = c.rsvp === "참석";
+                const badgeColor = isRsvpYes ? "bg-[#e8f0e6] text-[#3d6b35]" : "bg-[#f5e8e8] text-[#8c3e3e]";
+                
+                const card = document.createElement('div');
+                card.className = "p-4 bg-white rounded-xl border border-[#ebd99f]/60 shadow-sm space-y-1.5 transition-all";
+                card.innerHTML = `
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center space-x-2">
+                            <span class="font-semibold text-xs text-[#2c251e]">${escapeHtml(c.name)}</span>
+                            <span class="text-[10px] px-2 py-0.5 rounded-full font-medium ${badgeColor}">${escapeHtml(c.rsvp)}</span>
+                        </div>
+                        <span class="text-[10px] text-[#aa9a8a]">${c.date}</span>
+                    </div>
+                    <p class="text-xs text-[#4a4035] leading-relaxed whitespace-pre-line">${escapeHtml(c.message)}</p>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        function escapeHtml(str) {
+            return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+        }
+
+        // Form Submit Handler
+        document.getElementById('comment-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const nameInput = document.getElementById('guest-name');
+            const messageInput = document.getElementById('guest-message');
+            const rsvpInput = document.querySelector('input[name="rsvp-status"]:checked');
+
+            const name = nameInput.value.trim();
+            const message = messageInput.value.trim();
+            const rsvp = rsvpInput ? rsvpInput.value : "참석";
+
+            if (!name || !message) return;
+
+            const today = new Date();
+            const dateStr = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
+
+            const newComment = {
+                id: Date.now(),
+                name: name,
+                rsvp: rsvp,
+                message: message,
+                date: dateStr
+            };
+
+            const comments = getComments();
+            comments.unshift(newComment);
+            saveComments(comments);
+            renderComments();
+
+            // Reset inputs
+            nameInput.value = '';
+            messageInput.value = '';
+
+            // Visual feedback banner
+            const toast = document.createElement('div');
+            toast.className = "fixed bottom-6 left-1/2 transform -translate-x-1/2 bg-[#2c251e] text-[#f7f2ea] text-xs px-4 py-2.5 rounded-full shadow-lg z-50 transition-opacity duration-300";
+            toast.textContent = "축하 메시지가 남겨졌습니다. 감사합니다!";
+            document.body.appendChild(toast);
+            setTimeout(() => {
+                toast.style.opacity = '0';
+                setTimeout(() => toast.remove(), 300);
+            }, 2500);
+        });
+
+        // Initialize on Load
+        window.onload = function() {
+            createSparkles();
+            renderComments();
+        };
+    </script>
+</body>
+</html>
